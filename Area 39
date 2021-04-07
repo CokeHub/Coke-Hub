@@ -186,3 +186,9 @@ Section7:NewButton("Open any door", "Server Side", function()
 		wait(1)
 	end
 end)
+Section7:NewButton("Escape (REJOIN TO STOP)", "Free Credits!", function()
+	while true do
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(747.450073, 10.0100098, -4.73498297)
+		wait(1)
+	end	
+end)
