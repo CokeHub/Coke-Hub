@@ -60,21 +60,6 @@ end)
 Section:NewButton("Remove Doors (CS)", "This Is Client Sided", function()
 	workspace.Interactables:Destroy()
 end)
-Section:NewButton("Invisible (Reset to Remove)", "This is server sided", function()
-	for i,v in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
-		if v:IsA("Shirt") or v:IsA("Pants") or v:IsA("Hat") then
-			v:Destroy()
-		end
-		if v:IsA("Part") or v:IsA("MeshPart") then
-			v.Transparency = 1
-			if v.Name == "Head" then
-				if v:FindFirstChild("face") then
-					v.face:Destroy()
-				end
-			end
-		end
-	end
-end)
 Section:NewTextBox("Teleport To Player", "TextboxInfo", function(txt)
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[txt].Character.HumanoidRootPart.CFrame
 end)
