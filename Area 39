@@ -1,9 +1,17 @@
+--[ Created By: Coke Hub! ]--
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("CokeHub - AREA 39 (WIP)", "DarkTheme")
-local Tab = Window:NewTab("MAIN")
-local Tab2 = Window:NewTab("Team Change")
-local Section = Tab:NewSection("Player")
-local Section2 = Tab2:NewSection("Teams")
+local Window = Library.CreateLib("CokeHub - AREA 39 (TELEPORTS!!)", "DarkTheme")
+local Tab1 = Window:NewTab("Credits/Settings")
+local Tab2 = Window:NewTab("MAIN")
+local Tab3 = Window:NewTab("Team Change")
+local Tab4 = Window:NewTab("Teleports")
+local Section4 = Tab1:NewSection("This Gui Was Created By: Coke Hub!")
+local Section5 = Tab1:NewSection("This Gui is still being worked on!")
+local Section6 = Tab1:NewSection("Settings")
+local Section = Tab2:NewSection("Player")
+local Section2 = Tab3:NewSection("Teams")
+local Section3 = Tab4:NewSection("Teleports")
 Section:NewButton("Show Radio", "This is for Class D", function()
 	game.Players.LocalPlayer.PlayerGui.Radio.Enabled = true
 end)
@@ -69,4 +77,115 @@ Section:NewButton("Invisible (Reset to Remove)", "This is server sided", functio
 end)
 Section:NewTextBox("Teleport To Player", "TextboxInfo", function(txt)
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[txt].Character.HumanoidRootPart.CFrame
+end)
+Section:NewTextBox("Authorize - NEED TOOL", "Needs the tool", function(txt)
+	local A_1 = game:GetService("Players")[txt]
+	local Event = game:GetService("ReplicatedStorage").Remotes.Authorize
+	Event:FireServer(A_1)
+end)
+Section3:NewButton("Class D Spawn", "Teleport", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-144, 55, 414)
+end)
+Section3:NewButton("Control Room", "Teleport", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(216.157288, 9.43268681, -44.7531128)
+end)
+Section3:NewButton("Directors Office", "Teleport", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(460.807617, 7.50883436, -4.80533075)
+end)
+Section3:NewButton("Evacuation Shelter", "Teleport", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(408.133087, 11.2154531, -129.448303)
+end)
+Section:NewButton("Fly (e)", "Fly", function()
+	repeat wait() 
+	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
+	local mouse = game.Players.LocalPlayer:GetMouse() 
+	repeat wait() until mouse
+	local plr = game.Players.LocalPlayer 
+	local torso = plr.Character.Head 
+	local flying = false
+	local deb = true 
+	local ctrl = {f = 0, b = 0, l = 0, r = 0} 
+	local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+	local maxspeed = 50 
+	local speed = 0 
+
+	function Fly() 
+		local bg = Instance.new("BodyGyro", torso) 
+		bg.P = 9e4 
+		bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+		bg.cframe = torso.CFrame 
+		local bv = Instance.new("BodyVelocity", torso) 
+		bv.velocity = Vector3.new(0,0.1,0) 
+		bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
+		repeat wait() 
+			plr.Character.Humanoid.PlatformStand = true 
+			if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
+				speed = speed+.5+(speed/maxspeed) 
+				if speed > maxspeed then 
+					speed = maxspeed 
+				end 
+			elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
+				speed = speed-1 
+				if speed < 0 then 
+					speed = 0 
+				end 
+			end 
+			if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+				lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
+			elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+			else 
+				bv.velocity = Vector3.new(0,0.1,0) 
+			end 
+			bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
+		until not flying 
+		ctrl = {f = 0, b = 0, l = 0, r = 0} 
+		lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+		speed = 0 
+		bg:Destroy() 
+		bv:Destroy() 
+		plr.Character.Humanoid.PlatformStand = false 
+	end 
+	mouse.KeyDown:connect(function(key) 
+		if key:lower() == "e" then 
+			if flying then flying = false 
+			else 
+				flying = true 
+				Fly() 
+			end 
+		elseif key:lower() == "w" then 
+			ctrl.f = 1 
+		elseif key:lower() == "s" then 
+			ctrl.b = -1 
+		elseif key:lower() == "a" then 
+			ctrl.l = -1 
+		elseif key:lower() == "d" then 
+			ctrl.r = 1 
+		end 
+	end) 
+	mouse.KeyUp:connect(function(key) 
+		if key:lower() == "w" then 
+			ctrl.f = 0 
+		elseif key:lower() == "s" then 
+			ctrl.b = 0 
+		elseif key:lower() == "a" then 
+			ctrl.l = 0 
+		elseif key:lower() == "d" then 
+			ctrl.r = 0 
+		end 
+	end)
+	Fly()
+end)
+Section:NewButton("Sit", "This is for Class D", function()
+	game.Players.LocalPlayer.Character.Humanoid.Sit = true
+end)
+Section:NewSlider("WalkSpeed", "SliderInfo", 500, 0, function(s)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("JumpPower", "SliderInfo", 500, 0, function(s) 
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+Section6:NewKeybind("Keybind", "KeybindInfo", Enum.KeyCode.RightShift, function()
+	Library:ToggleUI()
 end)
