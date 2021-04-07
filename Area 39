@@ -1,0 +1,72 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("CokeHub - AREA 39 (WIP)", "DarkTheme")
+local Tab = Window:NewTab("MAIN")
+local Tab2 = Window:NewTab("Team Change")
+local Section = Tab:NewSection("Player")
+local Section2 = Tab2:NewSection("Teams")
+Section:NewButton("Show Radio", "This is for Class D", function()
+	game.Players.LocalPlayer.PlayerGui.Radio.Enabled = true
+end)
+Section2:NewButton("Class D", "Change Team without menu", function()
+	local A_1 = "ChangeTeam"
+	local A_2 = "Class D"
+	local A_3 = "Class D"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Post
+	Event:FireServer(A_1, A_2, A_3)
+end)
+Section2:NewButton("Foundation Personnel", "Change Team without menu", function()
+	local A_1 = "ChangeTeam"
+	local A_2 = "Foundation Personnel"
+	local A_3 = "Foundation Personnel"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Post
+	Event:FireServer(A_1, A_2, A_3)
+end)
+Section2:NewButton("Security Department", "Change Team without menu", function()
+	local A_1 = "ChangeTeam"
+	local A_2 = "Security Department"
+	local A_3 = "Security Department"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Post
+	Event:FireServer(A_1, A_2, A_3)
+end)
+Section2:NewButton("Medical Department", "Change Team without menu", function()
+	local A_1 = "ChangeTeam"
+	local A_2 = "Medical Department"
+	local A_3 = "Medical Department"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Post
+	Event:FireServer(A_1, A_2, A_3)
+end)
+Section2:NewButton("Scientific Department", "Change Team without menu", function()
+	local A_1 = "ChangeTeam"
+	local A_2 = "Scientific Department"
+	local A_3 = "Scientific Department"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Post
+	Event:FireServer(A_1, A_2, A_3)
+end)
+Section2:NewButton("Ethics Committee", "Change Team without menu", function()
+	local A_1 = "ChangeTeam"
+	local A_2 = "Ethics Committee"
+	local A_3 = "Ethics Committee"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Post
+	Event:FireServer(A_1, A_2, A_3)
+end)
+Section:NewButton("Remove Doors (CS)", "This Is Client Sided", function()
+	workspace.Interactables:Destroy()
+end)
+Section:NewButton("Invisible (Reset to Remove)", "This is server sided", function()
+	for i,v in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
+		if v:IsA("Shirt") or v:IsA("Pants") or v:IsA("Hat") then
+			v:Destroy()
+		end
+		if v:IsA("Part") or v:IsA("MeshPart") then
+			v.Transparency = 1
+			if v.Name == "Head" then
+				if v:FindFirstChild("face") then
+					v.face:Destroy()
+				end
+			end
+		end
+	end
+end)
+Section:NewTextBox("Teleport To Player", "TextboxInfo", function(txt)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[txt].Character.HumanoidRootPart.CFrame
+end)
