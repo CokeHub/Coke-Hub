@@ -1,12 +1,15 @@
--- Area 02 --
-if game.GameId == 2808131030 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/Area-02", true))()
-end
--- Arsenal --
-if game.GameId == 286090429 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/Arsenal", true))()
-end
--- Vibe NYC --
-if game.GameId == 5388509011 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/Vibe%20NYC", true))()
+if game.placeId == 5780309044 then -- Stands Awakening
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/Stands%20Awakening"))()
+
+
+elseif  game.placeId == 6531005851  then -- Lifting Titans
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/Lifting%20Titans"))()
+
+
+elseif game.placeId == 1537690962 then -- Bee Swarm Simulator
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kyron14-max/Lunatic/main/games/BeeSwarmSimulator.lua"))()
+elseif game.placeId == 6447798030 then -- Funky Friday
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kyron14-max/Lunatic/main/games/FunkyFriday.lua"))()
+else
+ 
 end
