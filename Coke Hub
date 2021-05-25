@@ -11,5 +11,5 @@ elseif game.placeId == 1537690962 then -- Bee Swarm Simulator
 elseif game.placeId == 6447798030 then -- Funky Friday
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Kyron14-max/Lunatic/main/games/FunkyFriday.lua"))()
 else
- 
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/Universal%20GUI"))() 
 end
