@@ -42,7 +42,6 @@ local CMDX = Instance.new("TextButton")
 local UICorner_15 = Instance.new("UICorner")
 local infiniteyield = Instance.new("TextButton")
 local UICorner_16 = Instance.new("UICorner")
-local Stuff = Instance.new("Folder")
 local Scripts = Instance.new("Folder")
 local Message = Instance.new("Frame")
 local UICorner_17 = Instance.new("UICorner")
@@ -328,9 +327,6 @@ infiniteyield.TextWrapped = true
 
 UICorner_16.Parent = infiniteyield
 
-Stuff.Name = "Stuff"
-Stuff.Parent = Chat_Method
-
 Scripts.Name = "Scripts"
 Scripts.Parent = Chat_Method
 
@@ -386,7 +382,7 @@ close.TextWrapped = true
 
 -- Scripts:
 
-local function ETERR_fake_script() -- Logo.changer 
+local function UNWI_fake_script() -- Logo.changer 
 	local script = Instance.new('Script', Logo)
 
 	
@@ -514,8 +510,8 @@ local function ETERR_fake_script() -- Logo.changer
 	end
 	
 end
-coroutine.wrap(ETERR_fake_script)()
-local function SSSYR_fake_script() -- Welcome.Rainbow Script! 
+coroutine.wrap(UNWI_fake_script)()
+local function ROPXOCH_fake_script() -- Welcome.Rainbow Script! 
 	local script = Instance.new('Script', Welcome)
 
 	--[[
@@ -638,8 +634,8 @@ local function SSSYR_fake_script() -- Welcome.Rainbow Script!
 		wait(d)
 	end
 end
-coroutine.wrap(SSSYR_fake_script)()
-local function IBARZI_fake_script() -- Player.LocalScript 
+coroutine.wrap(ROPXOCH_fake_script)()
+local function DOFF_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	local gui = script.Parent.Parent.Parent.Player
@@ -654,8 +650,8 @@ local function IBARZI_fake_script() -- Player.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(IBARZI_fake_script)()
-local function OSBIEDN_fake_script() -- Admin.LocalScript 
+coroutine.wrap(DOFF_fake_script)()
+local function ETCSD_fake_script() -- Admin.LocalScript 
 	local script = Instance.new('LocalScript', Admin)
 
 	local gui = script.Parent.Parent.Parent.Player
@@ -670,8 +666,8 @@ local function OSBIEDN_fake_script() -- Admin.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(OSBIEDN_fake_script)()
-local function DUIZVTO_fake_script() -- JP.LocalScript 
+coroutine.wrap(ETCSD_fake_script)()
+local function OJGR_fake_script() -- JP.LocalScript 
 	local script = Instance.new('LocalScript', JP)
 
 	TextBox = script.Parent
@@ -684,8 +680,8 @@ local function DUIZVTO_fake_script() -- JP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DUIZVTO_fake_script)()
-local function OKETE_fake_script() -- Walkspeed.LocalScript 
+coroutine.wrap(OJGR_fake_script)()
+local function SYJBE_fake_script() -- Walkspeed.LocalScript 
 	local script = Instance.new('LocalScript', Walkspeed)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -697,8 +693,8 @@ local function OKETE_fake_script() -- Walkspeed.LocalScript
 		end
 	end)
 end
-coroutine.wrap(OKETE_fake_script)()
-local function BMGAK_fake_script() -- JumpPower.LocalScript 
+coroutine.wrap(SYJBE_fake_script)()
+local function UTXBLAZ_fake_script() -- JumpPower.LocalScript 
 	local script = Instance.new('LocalScript', JumpPower)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -710,8 +706,8 @@ local function BMGAK_fake_script() -- JumpPower.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BMGAK_fake_script)()
-local function SWLWG_fake_script() -- Fly.LocalScript 
+coroutine.wrap(UTXBLAZ_fake_script)()
+local function PNCBB_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	function leftClick()
@@ -799,8 +795,8 @@ local function SWLWG_fake_script() -- Fly.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(SWLWG_fake_script)()
-local function NCTAF_fake_script() -- Noclip.LocalScript 
+coroutine.wrap(PNCBB_fake_script)()
+local function MCZWJYV_fake_script() -- Noclip.LocalScript 
 	local script = Instance.new('LocalScript', Noclip)
 
 	function leftClick()
@@ -821,8 +817,8 @@ local function NCTAF_fake_script() -- Noclip.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(NCTAF_fake_script)()
-local function IFLXFE_fake_script() -- Walkspeed2.LocalScript 
+coroutine.wrap(MCZWJYV_fake_script)()
+local function LBEXR_fake_script() -- Walkspeed2.LocalScript 
 	local script = Instance.new('LocalScript', Walkspeed2)
 
 	TextBox = script.Parent
@@ -835,8 +831,8 @@ local function IFLXFE_fake_script() -- Walkspeed2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(IFLXFE_fake_script)()
-local function BEWZ_fake_script() -- CMDX.LocalScript 
+coroutine.wrap(LBEXR_fake_script)()
+local function IIOSZRY_fake_script() -- CMDX.LocalScript 
 	local script = Instance.new('LocalScript', CMDX)
 
 	function leftClick()
@@ -845,8 +841,8 @@ local function BEWZ_fake_script() -- CMDX.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(BEWZ_fake_script)()
-local function FXKN_fake_script() -- infiniteyield.LocalScript 
+coroutine.wrap(IIOSZRY_fake_script)()
+local function RVSNQS_fake_script() -- infiniteyield.LocalScript 
 	local script = Instance.new('LocalScript', infiniteyield)
 
 	function leftClick()
@@ -855,8 +851,8 @@ local function FXKN_fake_script() -- infiniteyield.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(FXKN_fake_script)()
-local function BYXB_fake_script() -- Scripts.LocalScript 
+coroutine.wrap(RVSNQS_fake_script)()
+local function NTZX_fake_script() -- Scripts.LocalScript 
 	local script = Instance.new('LocalScript', Scripts)
 
 	local Command = "/e open" -- Change this to whatever the command is
@@ -864,14 +860,13 @@ local function BYXB_fake_script() -- Scripts.LocalScript
 	game.Players.LocalPlayer.Chatted:Connect(function(message)
 		if string.match(Command, message) then
 			script.Parent.Parent.Main.Visible = true
-			game.Lighting.HeyNoob.Enabled = true
 	        script.Parent.Parent.Message:Destroy()
 		else return end
 	
 	end)
 end
-coroutine.wrap(BYXB_fake_script)()
-local function FLUYNO_fake_script() -- Scripts.LocalScript 
+coroutine.wrap(NTZX_fake_script)()
+local function NKJAK_fake_script() -- Scripts.LocalScript 
 	local script = Instance.new('LocalScript', Scripts)
 
 	local Command = "/e close" -- Change this to whatever the command is
@@ -879,17 +874,8 @@ local function FLUYNO_fake_script() -- Scripts.LocalScript
 	game.Players.LocalPlayer.Chatted:Connect(function(message)
 		if string.match(Command, message) then
 			script.Parent.Parent.Main.Visible = false
-	        game.Lighting.HeyNoob.Enabled = false
 		else return end
 	
 	end)
 end
-coroutine.wrap(FLUYNO_fake_script)()
-local function TVGX_fake_script() -- Chat_Method.Script 
-	local script = Instance.new('Script', Chat_Method)
-
-	local thing = script.Parent.Stuff.HeyNoob
-	
-	thing:clone().Parent = game.Lighting wait(1) print("Cloned to Lighting") wait(1) thing:Destroy()
-end
-coroutine.wrap(TVGX_fake_script)()
+coroutine.wrap(NKJAK_fake_script)()
