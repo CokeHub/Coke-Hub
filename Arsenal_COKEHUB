@@ -1,0 +1,177 @@
+local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
+local s = VLib:Window("CokeHub", "Arsenal", "G")
+local ss = s:Tab("Aim Settings")
+local ss1 = s:Tab("Player")
+local ss2 = s:Tab("Other")
+local ss3 = s:Tab("GUI Stuff")
+
+ss:Button("Hitbox Expander",function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/gRgMfu2T",true))()
+end)
+
+ss:Button("Infinite Jump",function()
+	InfiniteJumpEnabled = true
+
+	game:GetService("UserInputService").JumpRequest:connect(function()
+		if InfiniteJumpEnabled then
+			game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+		end
+	end)
+end)
+
+ss:Button("Wallbang",function()
+	shared.WB = true
+	shared.Key = '  '
+
+	game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(Key)
+		if Key == shared.Key then
+			shared.WB = not shared.WB
+		end
+	end)
+
+	local mt = getrawmetatable(game)
+	local nc = mt.__namecall
+
+	setreadonly(mt, false)
+
+	mt.__namecall = newcclosure(function(self, ...)
+		local Method = getnamecallmethod()
+		local Arguments = {...}
+
+		if Method == 'FindPartOnRayWithIgnoreList' and shared.WB then
+			table.insert(Arguments[2], game.GetService(game, 'Workspace').Map)
+
+			return nc(self, unpack(Arguments))
+		end
+
+		return nc(self,...)
+	end)
+end)
+
+ss2:Label("Buttons")
+
+ss2:Button("Redeem Codes",function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/falseopx/falsescripts/main/RandomShit/RedeemAllCodes.lua"))()
+end)
+
+ss2:Button("Radar",function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/Radar"))()
+end)
+
+ss3:Colorpicker("Colorpicker",Color3.fromRGB(255, 1, 1),function(t)
+	print(t)
+end)
+
+ss:Button("Shoot kill all",function()
+	local a
+	local b
+	repeat game:GetService("RunService").Heartbeat:Wait() until game.Players.LocalPlayer and game.Players.LocalPlayer.PlayerGui:FindFirstChild("GUI")
+	for i,v in next, getgc() do
+		if (type(v) == 'function') and (debug.getinfo(v).name == 'firebullet') then
+			a = getfenv(v);
+			b = v
+		end
+	end
+	repeat game.RunService.Heartbeat:Wait() until game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+	game.Players.LocalPlayer.Character.Humanoid:WaitForChild("KMS")
+	local gunsilent = true
+	hook = hookfunction(a.firebullet, function(...)
+		local args = {...}
+		local Gun = game.ReplicatedStorage.Weapons:FindFirstChild(game.Players.LocalPlayer.NRPBS.EquippedTool.Value);
+		if gunsilent then
+			local Crit = math.random() > .6 and true or false;
+			for i,v in pairs(game.Players:GetPlayers()) do
+				if v and v.Character and v.Character:FindFirstChild("Head") then
+					local Distance = (game.Players.LocalPlayer.Character.Head.Position - v.Character.Head.Position).magnitude
+					for i = 1,5 do
+						game.ReplicatedStorage.Events.HitPart:FireServer(v.Character.Head,
+							v.Character.Head.Position + Vector3.new(math.random(), math.random(), math.random()),
+							Gun.Name,
+							Crit and 2 or 1,
+							Distance,
+							Backstab,
+							Crit,
+							false,
+							1,
+							false,
+							Gun.FireRate.Value,
+							Gun.ReloadTime.Value,
+							Gun.Ammo.Value,
+							Gun.StoredAmmo.Value,
+							Gun.Bullets.Value,
+							Gun.EquipTime.Value,
+							Gun.RecoilControl.Value,
+							Gun.Auto.Value,
+							Gun['Speed%'].Value,
+							game.ReplicatedStorage.wkspc.DistributedTime.Value);
+					end
+				end
+			end
+		end
+		return hook(...)
+	end)
+end)
+
+-- Stuff for infinite scripts --
+shared.infammo = false;
+shared.norecoil = false;
+shared.nospread = false;
+shared.auto = false;
+-- Continue here --
+
+ss:Label("  ")
+
+ss:Toggle("Infinite Ammo",function(t)
+	shared.infammo = t
+end)
+
+ss:Toggle("No Recoil",function(t)
+	shared.norecoil = t
+end)
+
+ss:Toggle("No Spread",function(t)
+	shared.nospread = t
+end)
+
+ss:Toggle("Automatic Gun",function(t)
+	shared.auto = t
+end)
+
+-- Stuff for infinite scripts --
+local func;
+for i,v in next, getgc(true) do
+	if typeof(v) == "table" and rawget(v, 'countammo') then
+		func = v
+	end
+end
+
+local mt = getrawmetatable(game);
+setreadonly(mt,false)
+local newindex = mt.__newindex
+
+mt.__newindex = newcclosure(function(Instance, Property, Value)
+	if tostring(Instance) == 'Clip' and Instance:IsA('TextLabel') and tostring(Instance.Parent) == 'Ammo' then
+		if Property == 'Text' then
+			if shared.infammo then
+				func.ammocount = 999
+			end
+			if shared.norecoil then
+				func.recoil = 0
+			end
+			if shared.nospread then
+				func.spreadmodifier = 0
+				func.currentspread = 0 
+			end
+			if shared.auto then
+				func.mode = 'automatic'
+			end
+		end
+	end
+
+	return newindex(Instance, Property, Value)
+end)
+-- Continue here --
+
+ss1:Dropdown("Custom Knife - CS",{"Option 1", "Option 2", "Option 3", "Option 4", "Option 5"},function(t)
+	print(t)
+end)
