@@ -46,7 +46,7 @@ local Scripts = Instance.new("Folder")
 
 --Properties:
 
-ScreenGui.Parent = game.Workspace
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
@@ -325,7 +325,7 @@ Scripts.Parent = ScreenGui
 
 -- Scripts:
 
-local function YJIKVJ_fake_script() -- Logo.changer 
+local function HKDEBE_fake_script() -- Logo.changer 
 	local script = Instance.new('Script', Logo)
 
 	
@@ -453,8 +453,8 @@ local function YJIKVJ_fake_script() -- Logo.changer
 	end
 	
 end
-coroutine.wrap(YJIKVJ_fake_script)()
-local function MZPA_fake_script() -- Welcome.Rainbow Script! 
+coroutine.wrap(HKDEBE_fake_script)()
+local function CUKHQ_fake_script() -- Welcome.Rainbow Script! 
 	local script = Instance.new('Script', Welcome)
 
 	--[[
@@ -577,8 +577,8 @@ local function MZPA_fake_script() -- Welcome.Rainbow Script!
 		wait(d)
 	end
 end
-coroutine.wrap(MZPA_fake_script)()
-local function CRLCOEY_fake_script() -- Player.LocalScript 
+coroutine.wrap(CUKHQ_fake_script)()
+local function GKQR_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	local gui = script.Parent.Parent.Parent.Player
@@ -593,8 +593,8 @@ local function CRLCOEY_fake_script() -- Player.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(CRLCOEY_fake_script)()
-local function ZKCVX_fake_script() -- Admin.LocalScript 
+coroutine.wrap(GKQR_fake_script)()
+local function PBWB_fake_script() -- Admin.LocalScript 
 	local script = Instance.new('LocalScript', Admin)
 
 	local gui = script.Parent.Parent.Parent.Player
@@ -609,8 +609,8 @@ local function ZKCVX_fake_script() -- Admin.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(ZKCVX_fake_script)()
-local function KHCM_fake_script() -- JP.LocalScript 
+coroutine.wrap(PBWB_fake_script)()
+local function GQZN_fake_script() -- JP.LocalScript 
 	local script = Instance.new('LocalScript', JP)
 
 	TextBox = script.Parent
@@ -623,8 +623,8 @@ local function KHCM_fake_script() -- JP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(KHCM_fake_script)()
-local function YCUKLUQ_fake_script() -- Walkspeed.LocalScript 
+coroutine.wrap(GQZN_fake_script)()
+local function ESUTBED_fake_script() -- Walkspeed.LocalScript 
 	local script = Instance.new('LocalScript', Walkspeed)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -636,8 +636,8 @@ local function YCUKLUQ_fake_script() -- Walkspeed.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YCUKLUQ_fake_script)()
-local function XSOTM_fake_script() -- JumpPower.LocalScript 
+coroutine.wrap(ESUTBED_fake_script)()
+local function RTVER_fake_script() -- JumpPower.LocalScript 
 	local script = Instance.new('LocalScript', JumpPower)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -649,8 +649,8 @@ local function XSOTM_fake_script() -- JumpPower.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XSOTM_fake_script)()
-local function DHSILB_fake_script() -- Fly.LocalScript 
+coroutine.wrap(RTVER_fake_script)()
+local function YEWPOE_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	function leftClick()
@@ -738,8 +738,8 @@ local function DHSILB_fake_script() -- Fly.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(DHSILB_fake_script)()
-local function USGW_fake_script() -- Noclip.LocalScript 
+coroutine.wrap(YEWPOE_fake_script)()
+local function SXASVK_fake_script() -- Noclip.LocalScript 
 	local script = Instance.new('LocalScript', Noclip)
 
 	function leftClick()
@@ -760,8 +760,8 @@ local function USGW_fake_script() -- Noclip.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(USGW_fake_script)()
-local function LFBZ_fake_script() -- Walkspeed2.LocalScript 
+coroutine.wrap(SXASVK_fake_script)()
+local function NDPP_fake_script() -- Walkspeed2.LocalScript 
 	local script = Instance.new('LocalScript', Walkspeed2)
 
 	TextBox = script.Parent
@@ -774,8 +774,8 @@ local function LFBZ_fake_script() -- Walkspeed2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LFBZ_fake_script)()
-local function TNSX_fake_script() -- CMDX.LocalScript 
+coroutine.wrap(NDPP_fake_script)()
+local function WLZOXBY_fake_script() -- CMDX.LocalScript 
 	local script = Instance.new('LocalScript', CMDX)
 
 	function leftClick()
@@ -784,8 +784,8 @@ local function TNSX_fake_script() -- CMDX.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(TNSX_fake_script)()
-local function XXVBF_fake_script() -- infiniteyield.LocalScript 
+coroutine.wrap(WLZOXBY_fake_script)()
+local function QNAI_fake_script() -- infiniteyield.LocalScript 
 	local script = Instance.new('LocalScript', infiniteyield)
 
 	function leftClick()
@@ -794,8 +794,8 @@ local function XXVBF_fake_script() -- infiniteyield.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(XXVBF_fake_script)()
-local function GUUOPEG_fake_script() -- Scripts.LocalScript 
+coroutine.wrap(QNAI_fake_script)()
+local function ROYSVJ_fake_script() -- Scripts.LocalScript 
 	local script = Instance.new('LocalScript', Scripts)
 
 	local UIS = game:GetService("UserInputService")
@@ -811,4 +811,4 @@ local function GUUOPEG_fake_script() -- Scripts.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GUUOPEG_fake_script)()
+coroutine.wrap(ROYSVJ_fake_script)()
