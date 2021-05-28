@@ -6,8 +6,8 @@ elseif  game.placeId == 6531005851  then -- Lifting Titans
      loadstring(game:HttpGet("https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/Lifting%20Titans"))()
 
 
-elseif game.placeId == 1537690962 then -- Bee Swarm Simulator
-    Kick("Game no longer supported")
+elseif game.placeId == 286090429 then -- Arsenal
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/Arsenal_COKEHUB"))()
 else
- loadstring(game:HttpGet("https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/Universal%20GUI"))() 
+ loadstring(game:HttpGet(('https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/test')))()
 end
