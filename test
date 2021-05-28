@@ -3,7 +3,7 @@
 
 -- Instances:
 
-local Chat_Method = Instance.new("ScreenGui")
+local ScreenGui = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local Frame = Instance.new("Frame")
@@ -42,33 +42,25 @@ local CMDX = Instance.new("TextButton")
 local UICorner_15 = Instance.new("UICorner")
 local infiniteyield = Instance.new("TextButton")
 local UICorner_16 = Instance.new("UICorner")
-local Stuff = Instance.new("Folder")
 local Scripts = Instance.new("Folder")
-local Message = Instance.new("Frame")
-local UICorner_17 = Instance.new("UICorner")
-local Title = Instance.new("TextLabel")
-local Open = Instance.new("TextLabel")
-local close = Instance.new("TextLabel")
 
 --Properties:
 
-Chat_Method.Name = "Chat_Method"
-Chat_Method.Parent = game.Workspace
-Chat_Method.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
-Main.Parent = Chat_Method
+Main.Parent = ScreenGui
 Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Main.Position = UDim2.new(0.144226983, 0, 0.191211313, 0)
+Main.Position = UDim2.new(0.381999999, 0, 1.22899997, 0)
 Main.Size = UDim2.new(0, 614, 0, 532)
-Main.Visible = false
 
 UICorner.Parent = Main
 
 Frame.Name = "-"
 Frame.Parent = Main
 Frame.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-Frame.Position = UDim2.new(-0.026478529, 0, -0.0176757574, 0)
+Frame.Position = UDim2.new(-0.0167065356, 0, -0.0176757574, 0)
 Frame.Size = UDim2.new(0, 617, 0, 530)
 
 UICorner_2.Parent = Frame
@@ -328,65 +320,12 @@ infiniteyield.TextWrapped = true
 
 UICorner_16.Parent = infiniteyield
 
-Stuff.Name = "Stuff"
-Stuff.Parent = Chat_Method
-
 Scripts.Name = "Scripts"
-Scripts.Parent = Chat_Method
-
-Message.Name = "Message"
-Message.Parent = Chat_Method
-Message.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Message.Position = UDim2.new(0.766847432, 0, 0.389434874, 0)
-Message.Size = UDim2.new(0, 278, 0, 158)
-
-UICorner_17.Parent = Message
-
-Title.Name = "Title"
-Title.Parent = Message
-Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title.BackgroundTransparency = 1.000
-Title.Position = UDim2.new(0.0389211178, 0, -0.000501602888, 0)
-Title.Size = UDim2.new(0, 256, 0, 54)
-Title.Font = Enum.Font.DenkOne
-Title.Text = "Open/Close Commands"
-Title.TextColor3 = Color3.fromRGB(74, 255, 8)
-Title.TextScaled = true
-Title.TextSize = 14.000
-Title.TextStrokeTransparency = 0.000
-Title.TextWrapped = true
-
-Open.Name = "Open"
-Open.Parent = Message
-Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Open.BackgroundTransparency = 1.000
-Open.Position = UDim2.new(0.0497124866, 0, 0.328612328, 0)
-Open.Size = UDim2.new(0, 256, 0, 54)
-Open.Font = Enum.Font.DenkOne
-Open.Text = "/e open"
-Open.TextColor3 = Color3.fromRGB(74, 255, 8)
-Open.TextScaled = true
-Open.TextSize = 14.000
-Open.TextStrokeTransparency = 0.000
-Open.TextWrapped = true
-
-close.Name = "close"
-close.Parent = Message
-close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-close.BackgroundTransparency = 1.000
-close.Position = UDim2.new(0.0497124866, 0, 0.613422453, 0)
-close.Size = UDim2.new(0, 256, 0, 54)
-close.Font = Enum.Font.DenkOne
-close.Text = "/e close"
-close.TextColor3 = Color3.fromRGB(74, 255, 8)
-close.TextScaled = true
-close.TextSize = 14.000
-close.TextStrokeTransparency = 0.000
-close.TextWrapped = true
+Scripts.Parent = ScreenGui
 
 -- Scripts:
 
-local function EZEEY_fake_script() -- Logo.changer 
+local function LWCW_fake_script() -- Logo.changer 
 	local script = Instance.new('Script', Logo)
 
 	
@@ -514,8 +453,8 @@ local function EZEEY_fake_script() -- Logo.changer
 	end
 	
 end
-coroutine.wrap(EZEEY_fake_script)()
-local function NZXYN_fake_script() -- Welcome.Rainbow Script! 
+coroutine.wrap(LWCW_fake_script)()
+local function EUVETDQ_fake_script() -- Welcome.Rainbow Script! 
 	local script = Instance.new('Script', Welcome)
 
 	--[[
@@ -638,8 +577,8 @@ local function NZXYN_fake_script() -- Welcome.Rainbow Script!
 		wait(d)
 	end
 end
-coroutine.wrap(NZXYN_fake_script)()
-local function NNDQSO_fake_script() -- Player.LocalScript 
+coroutine.wrap(EUVETDQ_fake_script)()
+local function JHBZX_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	local gui = script.Parent.Parent.Parent.Player
@@ -654,8 +593,8 @@ local function NNDQSO_fake_script() -- Player.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(NNDQSO_fake_script)()
-local function RBBVSBZ_fake_script() -- Admin.LocalScript 
+coroutine.wrap(JHBZX_fake_script)()
+local function NCKM_fake_script() -- Admin.LocalScript 
 	local script = Instance.new('LocalScript', Admin)
 
 	local gui = script.Parent.Parent.Parent.Player
@@ -670,8 +609,8 @@ local function RBBVSBZ_fake_script() -- Admin.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(RBBVSBZ_fake_script)()
-local function PJTFPF_fake_script() -- JP.LocalScript 
+coroutine.wrap(NCKM_fake_script)()
+local function QRZBFQV_fake_script() -- JP.LocalScript 
 	local script = Instance.new('LocalScript', JP)
 
 	TextBox = script.Parent
@@ -684,8 +623,8 @@ local function PJTFPF_fake_script() -- JP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(PJTFPF_fake_script)()
-local function XCSDHZB_fake_script() -- Walkspeed.LocalScript 
+coroutine.wrap(QRZBFQV_fake_script)()
+local function XVJM_fake_script() -- Walkspeed.LocalScript 
 	local script = Instance.new('LocalScript', Walkspeed)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -697,8 +636,8 @@ local function XCSDHZB_fake_script() -- Walkspeed.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XCSDHZB_fake_script)()
-local function WBMMUBF_fake_script() -- JumpPower.LocalScript 
+coroutine.wrap(XVJM_fake_script)()
+local function LAYB_fake_script() -- JumpPower.LocalScript 
 	local script = Instance.new('LocalScript', JumpPower)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -710,8 +649,8 @@ local function WBMMUBF_fake_script() -- JumpPower.LocalScript
 		end
 	end)
 end
-coroutine.wrap(WBMMUBF_fake_script)()
-local function EVPJOGS_fake_script() -- Fly.LocalScript 
+coroutine.wrap(LAYB_fake_script)()
+local function CYYV_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	function leftClick()
@@ -799,8 +738,8 @@ local function EVPJOGS_fake_script() -- Fly.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(EVPJOGS_fake_script)()
-local function JJFCYHD_fake_script() -- Noclip.LocalScript 
+coroutine.wrap(CYYV_fake_script)()
+local function VSUXUF_fake_script() -- Noclip.LocalScript 
 	local script = Instance.new('LocalScript', Noclip)
 
 	function leftClick()
@@ -821,8 +760,8 @@ local function JJFCYHD_fake_script() -- Noclip.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(JJFCYHD_fake_script)()
-local function KRRQ_fake_script() -- Walkspeed2.LocalScript 
+coroutine.wrap(VSUXUF_fake_script)()
+local function GKPY_fake_script() -- Walkspeed2.LocalScript 
 	local script = Instance.new('LocalScript', Walkspeed2)
 
 	TextBox = script.Parent
@@ -835,8 +774,8 @@ local function KRRQ_fake_script() -- Walkspeed2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(KRRQ_fake_script)()
-local function VEXL_fake_script() -- CMDX.LocalScript 
+coroutine.wrap(GKPY_fake_script)()
+local function VOWJH_fake_script() -- CMDX.LocalScript 
 	local script = Instance.new('LocalScript', CMDX)
 
 	function leftClick()
@@ -845,8 +784,8 @@ local function VEXL_fake_script() -- CMDX.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(VEXL_fake_script)()
-local function KMVBZ_fake_script() -- infiniteyield.LocalScript 
+coroutine.wrap(VOWJH_fake_script)()
+local function STVR_fake_script() -- infiniteyield.LocalScript 
 	local script = Instance.new('LocalScript', infiniteyield)
 
 	function leftClick()
@@ -855,41 +794,21 @@ local function KMVBZ_fake_script() -- infiniteyield.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(leftClick)
 end
-coroutine.wrap(KMVBZ_fake_script)()
-local function BTBSFY_fake_script() -- Scripts.LocalScript 
+coroutine.wrap(STVR_fake_script)()
+local function OCPUP_fake_script() -- Scripts.LocalScript 
 	local script = Instance.new('LocalScript', Scripts)
 
-	local Command = "/e open" -- Change this to whatever the command is
+	local UIS = game:GetService("UserInputService")
+	local gui = script.Parent.Parent.Main
 	
-	game.Players.LocalPlayer.Chatted:Connect(function(message)
-		if string.match(Command, message) then
-			script.Parent.Parent.Main.Visible = true
-			game.Lighting.HeyNoob.Enabled = true
-	        script.Parent.Parent.Message:Destroy()
-		else return end
-	
+	UIS.InputBegan:Connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.Keyboard and Input.KeyCode == Enum.KeyCode.Q then --User pressed Q
+			if gui.Position == UDim2.new(0.185, 0, 0.188, 0) then --If open
+				gui:TweenPosition(UDim2.new(0.382, 0, 1.229, 0)) --Close UI
+			else --Is closed
+				gui:TweenPosition(UDim2.new(0.185, 0, 0.188, 0)) --Open UI
+			end
+		end
 	end)
 end
-coroutine.wrap(BTBSFY_fake_script)()
-local function QZASE_fake_script() -- Scripts.LocalScript 
-	local script = Instance.new('LocalScript', Scripts)
-
-	local Command = "/e close" -- Change this to whatever the command is
-	
-	game.Players.LocalPlayer.Chatted:Connect(function(message)
-		if string.match(Command, message) then
-			script.Parent.Parent.Main.Visible = false
-	        game.Lighting.HeyNoob.Enabled = false
-		else return end
-	
-	end)
-end
-coroutine.wrap(QZASE_fake_script)()
-local function HDZIB_fake_script() -- Chat_Method.Script 
-	local script = Instance.new('Script', Chat_Method)
-
-	local thing = script.Parent.Stuff.HeyNoob
-	
-	thing:clone().Parent = game.Lighting wait(1) print("Cloned to Lighting") wait(1) thing:Destroy()
-end
-coroutine.wrap(HDZIB_fake_script)()
+coroutine.wrap(OCPUP_fake_script)()
