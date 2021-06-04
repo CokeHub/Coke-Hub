@@ -8,6 +8,8 @@ elseif  game.placeId == 6531005851  then -- Lifting Titans
 
 elseif game.placeId == 286090429 then -- Arsenal
      loadstring(game:HttpGet("https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/Arsenal_COKEHUB"))()
+elseif game.placeId == 621129760 then -- KAT
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/KAT_COKEHUB"))()
 else
  loadstring(game:HttpGet(('https://raw.githubusercontent.com/CokeHub/Coke-Hub/main/test')))()
 end
